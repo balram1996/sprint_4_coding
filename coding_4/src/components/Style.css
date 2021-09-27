@@ -1,0 +1,17 @@
+html{
+    background-color: rgb(41, 108, 184);
+
+}
+
+.main-container{
+    display: flex;
+}
+.main-container img{
+  height: 100px;
+  width: 200px;
+}
+
+.main-container input{
+    height: 80px;
+    
+}
