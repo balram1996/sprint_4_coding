@@ -10,6 +10,7 @@ function BookCard({bookData}){
                    const {id,rating,title,author,image,description} = curElem;
                    return(
                        <>
+                       <div className="card">
                        <div className="card-container" key={id}>
                            <div className="card-body">
                                <span>
@@ -26,6 +27,7 @@ function BookCard({bookData}){
                                </span>
                            </div>
                            <img src={image} alt="images" className="book-image"/>
+                        </div>
                        </div>
                        </>
                    )
