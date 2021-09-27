@@ -2,22 +2,17 @@ import React, { useState, useEffect } from "react";
 import BookDetail from "./BookDetail"
 import "./Style.css";
 
-function BookCard({bookData}){
+
+
+function BookCard({book_Data}){
      
-    const [bdata,setBdata] = useState(bookData)
-    const [page,setPage] = useState(1)
-
-    useEffect(() => {
-        
-            setBdata(bookData)
-        
-    }, [page])
-
+    const [page,setPage] =  useState(1);
+    
     return(
         <>
         <section className="main-card--container">
             {
-               bdata.map((curElem)=>{
+               book_Data.map((curElem)=>{
                    const {id,rating,title,author,image,description} = curElem;
                    return(
                        <>

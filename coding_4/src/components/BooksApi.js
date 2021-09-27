@@ -1,4 +1,4 @@
-const book_data=[
+const bookdata=[
     {
        id:1,
        rating:4.5,
@@ -181,4 +181,4 @@ const book_data=[
 
 ]
 
-export default book_data;
+export default bookdata;
