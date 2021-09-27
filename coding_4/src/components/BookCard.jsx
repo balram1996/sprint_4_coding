@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BookDetail from "./BookDetail"
+import "./Style.css";
 
 function BookCard({bookData}){
+     
+    const [bdata,setBdata] = useState(bookData)
+    const [page,setPage] = useState(1)
 
-    const book_detail=()=>{
-        return (
-            <div>
-                <BookDetail/>
-            </div>
-        )
-    }
+    useEffect(() => {
+        
+            setBdata(bookData)
+        
+    }, [page])
 
     return(
         <>
-        <section className="main-card--container" onClick={book_detail}>
+        <section className="main-card--container">
             {
-               bookData.map((curElem)=>{
+               bdata.map((curElem)=>{
                    const {id,rating,title,author,image,description} = curElem;
                    return(
                        <>
@@ -46,8 +48,8 @@ function BookCard({bookData}){
             
         </section>
         <div className="page-btns-div">
-        <button className="page-btns">Previous</button>
-        <button className="page-btns">Next</button>
+        <button className="page-btns" onClick={()=>setPage(page-1)}>Previous</button>
+        <button className="page-btns" onClick={()=>setPage(page+1)}>Next</button>
         </div>
         </>
     )
