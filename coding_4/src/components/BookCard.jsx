@@ -1,10 +1,19 @@
 import React from "react";
+import BookDetail from "./BookDetail"
 
 function BookCard({bookData}){
 
+    const book_detail=()=>{
+        return (
+            <div>
+                <BookDetail/>
+            </div>
+        )
+    }
+
     return(
         <>
-        <section className="main-card--container">
+        <section className="main-card--container" onClick={book_detail}>
             {
                bookData.map((curElem)=>{
                    const {id,rating,title,author,image,description} = curElem;
@@ -29,11 +38,17 @@ function BookCard({bookData}){
                            <img src={image} alt="images" className="book-image"/>
                         </div>
                        </div>
+                    
                        </>
                    )
                })
             }
+            
         </section>
+        <div className="page-btns-div">
+        <button className="page-btns">Previous</button>
+        <button className="page-btns">Next</button>
+        </div>
         </>
     )
 }
