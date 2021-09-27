@@ -25,3 +25,16 @@ html{
     width: 70px;
     margin-top:45px;
 }
+
+.main-card--container{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(300px, 500px));
+    grid-gap:50px;
+    justify-content: space-around;
+}
+
+.card-container{
+    margin: 25px auto 0;
+    position: relative;
+    
+}
