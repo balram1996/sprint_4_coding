@@ -9,9 +9,19 @@ html{
 .main-container img{
   height: 100px;
   width: 200px;
+  margin-left: 100px;
 }
 
 .main-container input{
-    height: 80px;
-    
+    height: 40px;
+    width: 800px;
+    margin-top: 45px;
+    border-radius: 5px;
+    margin-left: 200px;
+}
+
+.main-container button{
+    height: 45px;
+    width: 70px;
+    margin-top:45px;
 }
